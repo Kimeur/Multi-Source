@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="379.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication2.FXMLDocumentController">
+  <children>
+    <Button fx:id="button" layoutX="268.0" layoutY="34.0" onAction="#handleButtonAction" text="Rechercher" />
+    <MenuBar layoutX="7.0" layoutY="2.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleOpenAction" text="Ouvrir" />
+            <MenuItem mnemonicParsing="false" text="Récent" />
+            <MenuItem mnemonicParsing="false" onAction="#handleCloseAction" text="Fermer" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" onAction="#handleCopyAction" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Past" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <ListView fx:id="listcont" layoutX="35.0" layoutY="85.0" prefHeight="230.0" prefWidth="308.0" />
+    
+    <TextField fx:id="cont" layoutX="14.0" layoutY="34.0" prefWidth="247.0" promptText="Tapez une question" />
+    <ChoiceBox disable="false" layoutX="278.0" layoutY="61.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="DBB" />
+          <String fx:value="XML" />
+          <String fx:value="Html" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="228.0" layoutY="60.0" prefHeight="21.0" text="Trier par:" />
+  </children>
+</AnchorPane>
