@@ -29,23 +29,15 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
-            <MenuItem mnemonicParsing="false" text="About" />
+            <MenuItem mnemonicParsing="false" onAction="#handleAboutAction" text="About" />
           </items>
         </Menu>
       </menus>
     </MenuBar>
     <ListView fx:id="listcont" layoutX="35.0" layoutY="85.0" prefHeight="230.0" prefWidth="308.0" />
-    
     <TextField fx:id="cont" layoutX="14.0" layoutY="34.0" prefWidth="247.0" promptText="Tapez une question" />
-    <ChoiceBox disable="false" layoutX="278.0" layoutY="61.0">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="DBB" />
-          <String fx:value="XML" />
-          <String fx:value="Html" />
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-    <Label layoutX="228.0" layoutY="60.0" prefHeight="21.0" text="Trier par:" />
+    <RadioButton layoutX="34.0" layoutY="63.0" mnemonicParsing="false" text="DBB" />
+    <RadioButton layoutX="105.0" layoutY="63.0" mnemonicParsing="false" text="XML" />
+    <RadioButton layoutX="166.0" layoutY="63.0" mnemonicParsing="false" text="Docs" />
   </children>
 </AnchorPane>
