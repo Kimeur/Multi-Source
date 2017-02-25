@@ -8,8 +8,7 @@ package javafxapplication2;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -84,16 +83,20 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         String s=cont.getText();
-        ArrayList<String> liste=new ArrayList();
-        liste = new ArrayList<String>(Arrays.asList(s.split(" ")));
-        Chercher chercher = new Chercher();
-        ArrayList<String> res = chercher.strategie(liste);
-        String resString = res.toString();
-        //items.add(resString);
-        System.out.println(resString);
+        Database.createconnection();
+        items = Databasequeries.getAllObject(s);
+       
         
+         
+        if (s.equals("Joy"))
+        {items.add("Joy is the story of the title character, who rose to become founder and matriarch of a powerful family business dynasty.");
         
-        
+        final Hyperlink hyperlink2 = new Hyperlink("http://www.imdb.com/title/tt2446980/videoplayer/vi4091916825?ref_=tt_ov_vi");
+        items.add(hyperlink2);
+        final Hyperlink hyperlink = new Hyperlink("http://www.imdb.com/title/tt2446980/videoplayer/vi4091916825?ref_=tt_ov_vi");
+        items.add(hyperlink);
+        }
+        listcont.setItems(items);  
     }
     
     @FXML

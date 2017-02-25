@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="379.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication2.FXMLDocumentController">
   <children>
-    <Button fx:id="button" layoutX="268.0" layoutY="34.0" onAction="#handleButtonAction" text="Rechercher" />
+    <Button fx:id="button" layoutX="268.0" layoutY="34.0" onAction="#handleButtonAction"  text="Rechercher" />
     <MenuBar layoutX="7.0" layoutY="2.0">
       <menus>
         <Menu mnemonicParsing="false" text="File">
